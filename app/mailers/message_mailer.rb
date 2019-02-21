@@ -10,6 +10,6 @@ class MessageMailer < ApplicationMailer
     @body = message.body
     @email = message.email
 
-    mail to: "kontact@example.com"
+    mail to: "etempsun01@gmail.com"
   end
 end
