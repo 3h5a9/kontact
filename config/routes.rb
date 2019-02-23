@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   # get 'contact', to: 'pages#contact'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   get 'contact-me', to: 'messages#new', as: 'new_message'
   post 'contact-me', to: 'messages#create', as: 'create_message'
