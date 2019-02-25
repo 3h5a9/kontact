@@ -21,11 +21,12 @@
   <div>
     <%= comment.name %><br>
     <%= comment.body %>
-    <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete  %> 
+    <%= link_to "delete", , method: :delete %>
   </div>
   <br>
 <% end %>
 <br><hr><br>
+
 <%= form_for([@post, @post.comments.build]) do |c| %>
   <%= c.text_field :name %><br>
   <%= c.text_area :body %><br>

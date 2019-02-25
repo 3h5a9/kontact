@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Post_ID</th>
+      <th>Commenter Name</th>
+      <th>Comment</th>
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @comments.each do |comment| %>
+        <tr>
+          <td><%= comment.id %></td>
+          <td><%= comment.post_id %></td>
+          <td><%= comment.name %></td>
+          <td><%= comment.body %></td>
+          <td><%= link_to 'Edit', edit_admin_comment_path(comment) %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
